@@ -1058,7 +1058,7 @@
 
 "@uniswap/v3-core@git+https://github.com/etcswap/v3-core.git#etcswap":
   version "1.0.1"
-  resolved "git+https://github.com/etcswap/v3-core.git#bb3363b86586304765017e3e9b3b1638dc8044e2"
+  resolved "git+https://github.com/etcswap/v3-core.git#d704d52586f3cb8df641b4f5ba0ebba00bf3130f"
 
 "@yarnpkg/lockfile@^1.1.0":
   version "1.1.0"
