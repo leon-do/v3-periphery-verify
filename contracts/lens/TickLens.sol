@@ -8,7 +8,6 @@ import '../interfaces/ITickLens.sol';
 
 /// @title Tick Lens contract
 contract TickLens is ITickLens {
-    uint8 CHAIN_ID = 61;
     /// @inheritdoc ITickLens
     function getPopulatedTicksInWord(address pool, int16 tickBitmapIndex)
         public
@@ -16,6 +15,7 @@ contract TickLens is ITickLens {
         override
         returns (PopulatedTick[] memory populatedTicks)
     {
+        uint8 CHAIN_ID = 61;
         // fetch bitmap
         uint256 bitmap = IUniswapV3Pool(pool).tickBitmap(tickBitmapIndex);
 
