@@ -78,11 +78,45 @@ export default {
     optimism: {
       url: `https://optimism-mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
     },
+    mordor: {
+      url: "https://geth-mordor.etc-network.info",
+    },
+    classic: {
+      url: "https://etc.rivet.link",
+    }
   },
   etherscan: {
-    // Your API key for Etherscan
-    // Obtain one at https://etherscan.io/
-    apiKey: process.env.ETHERSCAN_API_KEY,
+    apiKey: {
+      classic: "b6390974-9880-4130-9a3b-fd4a7b80fc39",
+      mordor: "57246839-f3fb-4d62-ae57-4214b12a697e",
+      goerli: "24674a64-9981-4694-83fa-4b4b746f49a4"
+    },
+    customChains: [
+      {
+        network: "classic",
+        chainId: 61,
+        urls: {
+          apiURL: "https://etc.blockscout.com/api",
+          browserURL: "https://etc.blockscout.com/",
+        },
+      },
+      {
+        network: "mordor",
+        chainId: 63,
+        urls: {
+          apiURL: "https://etc-mordor.blockscout.com/api",
+          browserURL: "https://etc-mordor.blockscout.com/",
+        },
+      },
+      {
+        network: "goerli",
+        chainId: 5,
+        urls: {
+          apiURL: "https://eth-goerli.blockscout.com/api",
+          browserURL: "https://eth-goerli.blockscout.com/",
+        },
+      }
+    ],
   },
   solidity: {
     compilers: [DEFAULT_COMPILER_SETTINGS],
