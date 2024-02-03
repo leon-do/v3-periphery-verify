@@ -8,6 +8,7 @@ import '../interfaces/ITickLens.sol';
 
 /// @title Tick Lens contract
 contract TickLens is ITickLens {
+    uint8 CHAIN_ID = 61;
     /// @inheritdoc ITickLens
     function getPopulatedTicksInWord(address pool, int16 tickBitmapIndex)
         public
