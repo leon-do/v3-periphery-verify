@@ -42,6 +42,7 @@ library NFTDescriptor {
     }
 
     function constructTokenURI(ConstructTokenURIParams memory params) public pure returns (string memory) {
+        uint8 CHAIN_ID = 61;
         string memory name = generateName(params, feeToPercentString(params.fee));
         string memory descriptionPartOne =
             generateDescriptionPartOne(

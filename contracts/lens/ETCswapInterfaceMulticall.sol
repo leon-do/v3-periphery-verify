@@ -16,6 +16,10 @@ contract ETCswapInterfaceMulticall {
         bytes returnData;
     }
 
+    function getChainId() public pure returns (uint256 chainId) {
+        chainId = 61; // CHAIN_ID
+    }
+
     function getCurrentBlockTimestamp() public view returns (uint256 timestamp) {
         timestamp = block.timestamp;
     }
